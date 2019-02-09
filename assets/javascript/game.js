@@ -7,7 +7,6 @@ $(document).ready(function() {
   let yellowCrystal = 0;
 
   // Score variables
-  let done = false;
   let totalScore = 0;
   let totalWins = 0;
   let totalLosses = 0;
@@ -24,7 +23,6 @@ $(document).ready(function() {
   orangeCrystal = getRandNumber(1, 12);
   redCrystal = getRandNumber(1, 12);
   yellowCrystal = getRandNumber(1, 12);
-  done = false;
 
   // Show score + target number
   $("#game-number").text(targetNumber);
@@ -39,22 +37,51 @@ $(document).ready(function() {
     orangeCrystal = getRandNumber(1, 12);
     redCrystal = getRandNumber(1, 12);
     yellowCrystal = getRandNumber(1, 12);
-    done = false;
+    totalScore = 0;
+
+    // Display nunmber of target number, wins, losses, and total score
     $("#game-number").text(targetNumber);
     $("#totalWins").text(totalWins);
     $("#totalLosses").text(totalLosses);
     $("#total-score").text(totalScore);
   }
 
-  $("#crystal-button").on("click", function(evt) {
-    const value = evt.currentTarget.value;
-    $("#total-score").append(value);
+  // Click blue crystal
+  $("#blue-crystal").on("click", function(evt) {
+    totalScore += blueCrystal;
+    $("#total-score").text(totalScore);
+    endGame();
   });
-  resetGame();
 
-  console.log("computer = " + targetNumber);
-  console.log("Blue = " + blueCrystal);
-  console.log("Orange = " + orangeCrystal);
-  console.log("Red = " + redCrystal);
-  console.log("Yellow = " + yellowCrystal);
+  //Click orange crystal
+  $("#orange-crystal").on("click", function(evt) {
+    totalScore += orangeCrystal;
+    $("#total-score").text(totalScore);
+    endGame();
+  });
+
+  //Click red crystal
+  $("#red-crystal").on("click", function(evt) {
+    totalScore += redCrystal;
+    $("#total-score").text(totalScore);
+    endGame();
+  });
+
+  //Click yellow crystal
+  $("#yellow-crystal").on("click", function(evt) {
+    totalScore += yellowCrystal;
+    $("#total-score").text(totalScore);
+    endGame();
+  });
+
+  function endGame() {
+    if (totalScore === targetNumber) {
+      totalWins++;
+      resetGame();
+    }
+    if (totalScore > targetNumber) {
+      totalLosses++;
+      resetGame();
+    }
+  }
 });
