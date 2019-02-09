@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crystals Collector</title>
+
+    <!--Added links to CSS style sheets-->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Added link to JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added link to javascript file-->
+    <script src="assets//javascript/game.js"></script>
+
+    <div>
+      <h1 class="game-title">Crystals Collector</h1>
+    </div>
+    <div class="instructions-text">
+      <p class="game-instructions">
+        You will be given a random number at the start of the game.
+        <br /><br />
+        There are four crystals below. By clicking on a crystal, you will add a
+        specific amount of points to your total score.
+        <br /><br />
+        You win the game by matching your total score to a randomly generated
+        number, you lose the game if your total score goes above the random
+        number.
+        <br /><br />
+        The value of each crystal is hidden from you until you click on it.
+        <br /><br />
+        Each time when the game starts, the game will change the values of each
+        crystal.
+      </p>
+
+      <div class="crystal-area">
+        <img
+          src="assets/images/Blue.png"
+          id="crystal-button"
+          alt="Blue-Crystal"
+        />
+        <img
+          src="assets/images/Orange.png"
+          id="crystal-button"
+          alt="Orange-Crystal"
+        />
+        <img
+          src="assets/images/Red.png"
+          id="crystal-button"
+          alt="Red-Crystal"
+        />
+        <img
+          src="assets/images/Yellow.png"
+          id="crystal-button"
+          alt="Yellow-Crystal"
+        />
+      </div>
+
+      <div class="given-number">
+        <p>Target Score:</p>
+        <h2 id="game-number"></h2>
+      </div>
+
+      <div class="score-container">
+        <p>
+          Wins:
+          <span id="totalWins"></span>
+        </p>
+        <p>
+          Losses:
+          <span id="totalLosses"></span>
+        </p>
+      </div>
+
+      <div>
+        <p class="answer-text">Your current score is:</p>
+        <h2 id="total-score"></h2>
+      </div>
+    </div>
+  </body>
+</html>
