@@ -44,6 +44,7 @@ $(document).ready(function() {
     $("#totalWins").text(totalWins);
     $("#totalLosses").text(totalLosses);
     $("#total-score").text(totalScore);
+    $("#winorloss-text").text();
   }
 
   // Click blue crystal
@@ -74,13 +75,16 @@ $(document).ready(function() {
     endGame();
   });
 
+  //Set function to end the game and change number of wins + losses
   function endGame() {
     if (totalScore === targetNumber) {
       totalWins++;
+      $("#winorloss-text").text("You won!");
       resetGame();
     }
     if (totalScore > targetNumber) {
       totalLosses++;
+      $("#winorloss-text").text("Sorry, you lose.");
       resetGame();
     }
   }

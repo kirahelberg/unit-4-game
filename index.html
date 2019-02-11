@@ -27,20 +27,27 @@
     </div>
     <div class="instructions-text">
       <p class="game-instructions">
-        You will be given a random number at the start of the game.
+        Let's play crystals collector! The goal is to add up your score to the
+        target number.
         <br /><br />
-        There are four crystals below. By clicking on a crystal, you will add a
-        specific amount of points to your total score.
+        There are four crystals below. When the game starts, each crystal will
+        be randomly assigned a value. The value changes at the start of each
+        game.
         <br /><br />
-        You win the game by matching your total score to a randomly generated
-        number, you lose the game if your total score goes above the random
-        number.
+        By clicking on a crystal, you will add a specific amount of points to
+        your total score. The value of each crystal will remain hidden from you,
+        so pay close attention to your score!
         <br /><br />
-        The value of each crystal is hidden from you until you click on it.
+        You win the game by matching your total score to the target number, and
+        you lose the game if your total score goes above the random number.
         <br /><br />
-        Each time when the game starts, the game will change the values of each
-        crystal.
+        Click a crystal to start the game!
       </p>
+
+      <div class="given-number">
+        <p>Target Number:</p>
+        <h2 id="game-number"></h2>
+      </div>
 
       <div class="crystal-area">
         <img
@@ -69,25 +76,23 @@
         />
       </div>
 
-      <div class="given-number">
-        <p>Target Score:</p>
-        <h2 id="game-number"></h2>
-      </div>
-
       <div class="score-container">
-        <p>
-          Wins:
-          <span id="totalWins"></span>
-        </p>
-        <p>
-          Losses:
-          <span id="totalLosses"></span>
-        </p>
-      </div>
+        <div id="user-guesses">
+          <p id="winorloss-text"></p>
+          <p class="answer-text">Your current score is:</p>
+          <h2 id="total-score"></h2>
+        </div>
 
-      <div>
-        <p class="answer-text">Your current score is:</p>
-        <h2 id="total-score"></h2>
+        <div id="wins-losses">
+          <p>
+            Wins:
+            <span id="totalWins"></span>
+          </p>
+          <p>
+            Losses:
+            <span id="totalLosses"></span>
+          </p>
+        </div>
       </div>
     </div>
   </body>

@@ -1,29 +1,27 @@
 body {
-  background: rgb(66, 66, 66);
-  color: white;
+  color: rgb(71, 2, 71);
   font-family: "Playfair Display", serif;
+  background: linear-gradient(to bottom, white, rgb(134, 220, 223));
 }
 
 .game-title {
   width: 100%;
   font-family: "Abril Fatface", cursive;
   letter-spacing: 5px;
-  font-size: 40px;
+  font-size: 74px;
   text-align: center;
-  vertical-align: middle;
+  margin-top: 10px;
   height: 80px;
 }
 
 .game-instructions {
-  width: 75%;
+  width: 50%;
   text-align: center;
   font-size: 18px;
-  margin: 20px auto 20px auto;
-  padding: 10px;
-  background: rgb(145, 145, 145);
-  color: black;
+  margin: 30px auto 30px auto;
+  padding: 15px;
   border-radius: 5px;
-  border: 10px double white;
+  border: 2px dotted rgb(71, 2, 71);
 }
 
 .given-number {
@@ -34,17 +32,25 @@ body {
   text-align: center;
 }
 
-#game-number {
+#game-number,
+#total-score {
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 3px;
 }
 
-.score-container {
-  width: 10%;
-  float: left;
-  margin: 20px;
+#wins-losses {
+  width: 50%;
+  margin: 20px auto 20px auto;
   padding: 5px;
+  text-align: center;
+}
+
+#user-guesses {
+  width: 50%;
+  margin: 20px auto 20px auto;
+  padding: 5px;
+  text-align: center;
 }
 
 .crystal-area {
@@ -54,5 +60,5 @@ body {
 }
 
 .crystal-button {
-  width: 100px;
+  width: 150px;
 }
