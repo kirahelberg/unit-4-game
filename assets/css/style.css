@@ -62,3 +62,25 @@ body {
 .crystal-button {
   width: 150px;
 }
+@media screen and (max-width: 768px) {
+  .crystal-button {
+  width: 190px;
+}
+}
+
+@media screen and (max-width: 576px) {
+  .game-title {
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+
+.game-instructions {
+  width: 75%;
+  font-size: 14px;
+  margin: 30px auto 30px auto;
+}
+  
+  .crystal-button {
+  width: 150px;
+}
+}
